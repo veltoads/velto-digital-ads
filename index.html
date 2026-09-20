@@ -3,131 +3,540 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Velto Digital Ads | Facebook & Instagram Advertising</title>
+
 <style>
-:root{--bg:#030d18;--panel:#071827;--line:#17324d;--text:#f5f8fc;--muted:#b5c4d5;--blue:#1597ff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:20;background:rgba(3,13,24,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;font-size:25px;letter-spacing:1px}
-.logo span{display:block;font-size:10px;letter-spacing:4px;color:#36aaff;margin-top:-5px}
-nav a{margin-left:26px;color:#dbe8f5;font-size:14px}
-nav a:hover{color:#32a9ff}
-.btn{display:inline-block;padding:13px 22px;border-radius:10px;background:linear-gradient(135deg,#1597ff,#0878ee);font-weight:700;box-shadow:0 10px 30px #008cff25}
-.hero{max-width:1200px;margin:auto;padding:85px 24px 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
-.badge{display:inline-block;border:1px solid #1b5f91;border-radius:30px;padding:8px 14px;color:#cde9ff;font-size:13px;margin-bottom:22px;background:#06182a}
-h1{font-size:clamp(45px,6vw,72px);line-height:1.02;margin-bottom:22px}
-.blue{color:#1597ff}
-.hero p{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:30px}
-.hero-actions a{margin-right:12px}
-.outline{border:1px solid #3b8cc8;background:transparent}
-.visual{min-height:340px;border:1px solid #1a4262;border-radius:24px;background:radial-gradient(circle at 70% 25%,#06396a,#061727 55%,#030d18);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 25px 70px #0008}
-.visual-box{width:78%;padding:30px;border-radius:18px;background:#081d31;border:1px solid #23618f;box-shadow:0 15px 45px #0008}
-.chart{height:150px;display:flex;align-items:end;gap:10px;margin-top:20px}
-.bar{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(#20a6ff,#075fb8)}
-.section{max-width:1200px;margin:auto;padding:75px 24px}
-.section-label{color:#22a7ff;font-size:12px;letter-spacing:3px;font-weight:800;margin-bottom:8px}
-.section h2{font-size:38px;margin-bottom:12px}
-.section-intro{color:var(--muted);max-width:700px;margin-bottom:35px}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:linear-gradient(180deg,#081b2d,#061522);border:1px solid #183b58;border-radius:16px;overflow:hidden}
-.card img{display:block;width:100%;height:245px;object-fit:cover;background:#fff}
-.card-body{padding:20px}
-.card h3{font-size:19px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.tag{font-size:11px;padding:6px 10px;border-radius:20px;background:#0c2942;color:#cce9ff;border:1px solid #1a4869}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
-.about-box{border:1px solid #183b58;border-radius:18px;padding:30px;background:#061522}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}
-.stat{border-top:1px solid #1b405e;padding-top:18px}
-.stat strong{display:block;font-size:30px;color:#1597ff}
-.stat span{font-size:12px;color:#aebed0}
-.contact{text-align:center;border:1px solid #183b58;border-radius:20px;background:linear-gradient(135deg,#061a2c,#071320);padding:55px 20px}
-.contact p{color:var(--muted);margin:10px 0 22px}
-.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:#8295a9;font-size:13px}
-@media(max-width:850px){.hero{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.about{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#07111f;
+  color:#ffffff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* NAVIGATION */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,17,31,0.95);
+  border-bottom:1px solid #20334d;
+}
+
+nav{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  color:#ffffff;
+}
+
+.logo span{
+  color:#19d3ff;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#dbe8f5;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:#19d3ff;
+}
+
+/* HERO */
+.hero{
+  padding:100px 0 80px;
+  background:linear-gradient(135deg,#07111f,#102d4d,#07111f);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid #19d3ff;
+  border-radius:30px;
+  color:#19d3ff;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+h1{
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
+
+.gradient{
+  background:linear-gradient(90deg,#19d3ff,#7c5cff,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:19px;
+  color:#b8c9db;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:10px;
+  font-weight:bold;
+  background:#19d3ff;
+  color:#06101d;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  background:transparent;
+  color:#ffffff;
+  border:1px solid #526985;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#9eb1c7;
+}
+
+/* ABOUT */
+.about{
+  background:#0a1728;
+}
+
+.about-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-box p{
+  color:#c5d2df;
+  font-size:18px;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.card{
+  background:#0d1d31;
+  border:1px solid #203a58;
+  border-radius:18px;
+  padding:30px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#19d3ff;
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.card p{
+  color:#aebed0;
+}
+
+/* PORTFOLIO */
+.portfolio{
+  background:#0a1728;
+}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.project{
+  overflow:hidden;
+  background:#0d1d31;
+  border:1px solid #203a58;
+  border-radius:18px;
+}
+
+.project img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  display:block;
+}
+
+.project-content{
+  padding:22px;
+}
+
+.project-content h3{
+  margin-bottom:8px;
+}
+
+.project-content p{
+  color:#aebed0;
+}
+
+/* RESULTS */
+.results-box{
+  text-align:center;
+  padding:45px 25px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#102d4d,#151d45);
+  border:1px solid #29466a;
+}
+
+.results-box h3{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.results-box p{
+  color:#c4d1df;
+  max-width:700px;
+  margin:auto;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  max-width:750px;
+  margin:auto;
+}
+
+.email{
+  display:inline-block;
+  margin:25px 0;
+  color:#19d3ff;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  padding:30px 0;
+  text-align:center;
+  border-top:1px solid #20334d;
+  color:#8499b0;
+}
+
+/* MOBILE */
+@media(max-width:750px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    padding:75px 0 60px;
+  }
+
+  h1{
+    font-size:45px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:65px 0;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="nav">
-<a href="#" class="logo">VELTO<span>DIGITAL ADS</span></a>
-<nav><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
-<a class="btn" href="#contact">Get Started</a>
-</div>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        Velto <span>Digital Ads</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<main>
-<section class="hero">
-<div>
-<div class="badge">Meta Ads • Instagram Ads • Growth</div>
-<h1>Turn Clicks Into <span class="blue">Real Customers</span></h1>
-<p>I help businesses grow with targeted Facebook & Instagram ads. From strategy to results, I create campaigns focused on visibility, engagement and sales.</p>
-<div class="hero-actions"><a class="btn" href="#contact">Work With Me</a><a class="btn outline" href="#portfolio">View My Work</a></div>
-</div>
-<div class="visual">
-<div class="visual-box">
-<strong>Campaign Performance</strong>
-<p style="color:#9fb5c9;margin-top:8px">Reach • Engagement • Results</p>
-<div class="chart">
-<div class="bar" style="height:35%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:57%"></div><div class="bar" style="height:66%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:96%"></div>
-</div>
-</div>
-</div>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container">
+
+    <span class="badge">Facebook & Instagram Advertising</span>
+
+    <h1>
+      We turn <span class="gradient">scrolls</span>
+      into scale.
+    </h1>
+
+    <p>
+      We help businesses reach the right audience, create effective
+      advertising campaigns and grow their online presence through
+      Facebook and Instagram advertising.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="btn">View Our Services</a>
+      <a href="#contact" class="btn btn-outline">DM for More Info</a>
+    </div>
+
+  </div>
 </section>
 
-<section id="portfolio" class="section">
-<div class="section-label">RECENT PROJECTS</div>
-<h2>Campaigns I've Worked On</h2>
-<p class="section-intro">Here are three campaign examples showing Facebook advertising, Instagram advertising and campaign performance reporting.</p>
-<div class="projects">
-<article class="card">
-<img src="facebook-campaign.png" alt="Facebook Ads campaign for Ayomart">
-<div class="card-body"><h3>Facebook Ads Campaign</h3><p>Targeted Facebook advertising campaign for Ayomart phone accessories.</p><div class="tags"><span class="tag">Facebook Ads</span><span class="tag">Targeting</span><span class="tag">Conversions</span></div></div>
-</article>
-<article class="card">
-<img src="instagram-campaign.png" alt="Instagram Ads campaign for Ayomart">
-<div class="card-body"><h3>Instagram Ads Campaign</h3><p>Instagram campaign designed to drive traffic, engagement and interest in Ayomart.</p><div class="tags"><span class="tag">Instagram Ads</span><span class="tag">Traffic</span><span class="tag">Engagement</span></div></div>
-</article>
-<article class="card">
-<img src="ad-results-report.png" alt="Ad results and performance report">
-<div class="card-body"><h3>Ad Results / Report</h3><p>Performance overview showing reach, link clicks, CTR and overall campaign results.</p><div class="tags"><span class="tag">Analytics</span><span class="tag">Performance</span><span class="tag">Growth</span></div></div>
-</article>
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About Velto Digital Ads</h2>
+      <p>Helping businesses advertise smarter.</p>
+    </div>
+
+    <div class="about-box">
+      <p>
+        Velto Digital Ads is a digital advertising brand focused on
+        Facebook and Instagram advertising. Our goal is to help
+        businesses reach the right people, improve their campaigns
+        and turn online attention into meaningful business growth.
+      </p>
+    </div>
+
+  </div>
 </section>
 
-<section id="about" class="section">
-<div class="about">
-<div class="about-box"><div class="section-label">WHY WORK WITH ME</div><h2>Your Growth Is <span class="blue">My Priority</span></h2><p style="color:var(--muted);margin-top:15px">I combine creativity, data and strategy to build advertising campaigns that are clear, targeted and focused on measurable results.</p></div>
-<div id="services" class="about-box"><h3 style="font-size:22px">What I Focus On</h3><p style="color:var(--muted);margin-top:12px">🎯 Targeted Advertising — reach the right people.</p><p style="color:var(--muted);margin-top:8px">📊 Data-Driven Results — use campaign data to improve decisions.</p><p style="color:var(--muted);margin-top:8px">⚡ Fast & Reliable Support — clear communication throughout the project.</p></div>
-</div>
-<div class="stats">
-<div class="stat"><strong>3+</strong><span>Campaign Examples</span></div>
-<div class="stat"><strong>40K+</strong><span>Total Reach</span></div>
-<div class="stat"><strong>3.3K+</strong><span>Total Link Clicks</span></div>
-<div class="stat"><strong>8.2%</strong><span>Average CTR</span></div>
-</div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Simple advertising solutions for growing businesses.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="card">
+        <div class="icon">📘</div>
+        <h3>Facebook Ads</h3>
+        <p>
+          Create and manage Facebook advertising campaigns
+          designed to reach the right audience.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📸</div>
+        <h3>Instagram Ads</h3>
+        <p>
+          Promote your products and services on Instagram
+          and connect with potential customers.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Audience Targeting</h3>
+        <p>
+          Identify and target audiences that are relevant
+          to your business and advertising goals.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Campaign Analysis</h3>
+        <p>
+          Review campaign performance and use advertising
+          data to make better decisions.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="section">
-<div class="contact">
-<div class="section-label">LET'S WORK TOGETHER</div>
-<h2>Ready to Grow?</h2>
-<p>Pricing: DM for more information.</p>
-<div class="contact-links">
-<a class="btn" href="https://wa.me/2349053364597">WhatsApp</a>
-<a class="btn outline" href="mailto:veltodigitalads@gmail.com">Email Me</a>
-</div>
-<p style="margin-top:22px">09053364597 • veltodigitalads@gmail.com • Instagram: @Ademart • Facebook: Velto Digital Ads</p>
-</div>
-</section>
-</main>
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
 
-<footer>© 2026 Velto Digital Ads. More Reach • More Engagement • More Sales</footer>
+    <div class="section-title">
+      <h2>Our Portfolio</h2>
+      <p>Sample advertising projects and campaign work.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="project">
+        <img src="facebook-campaign.png" alt="Facebook Ads Campaign">
+        <div class="project-content">
+          <h3>Facebook Ads Campaign</h3>
+          <p>
+            A sample Facebook advertising campaign focused
+            on reaching a targeted audience.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="instagram-campaign.png" alt="Instagram Ads Campaign">
+        <div class="project-content">
+          <h3>Instagram Ads Campaign</h3>
+          <p>
+            An Instagram advertising project designed to
+            increase visibility and audience engagement.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="ad-results-report.png" alt="Advertising Results Report">
+        <div class="project-content">
+          <h3>Ad Results & Report</h3>
+          <p>
+            Campaign performance presented through advertising
+            results and data analysis.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section>
+  <div class="container">
+
+    <div class="results-box">
+      <h3>From Attention to Growth</h3>
+      <p>
+        Good advertising starts with understanding the audience,
+        creating the right message and measuring campaign performance.
+        That's the approach we bring to every project.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Let's Work Together</h2>
+      <p>Ready to improve your Facebook or Instagram advertising?</p>
+    </div>
+
+    <div class="contact-box">
+
+      <a class="email" href="mailto:veltodigitalads@gmail.com">
+        veltodigitalads@gmail.com
+      </a>
+
+      <br>
+
+      <a class="btn" href="mailto:veltodigitalads@gmail.com">
+        DM for More Info
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Velto Digital Ads. All rights reserved.
+    <br>
+    We turn scrolls into scale.
+  </div>
+</footer>
+
 </body>
-</html>
+  </html>
