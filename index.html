@@ -130,7 +130,38 @@ h1{
 .btn:hover{
   transform:translateY(-2px);
 }
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
 
+.social-btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:12px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.facebook-btn{
+    background:#1877F2;
+    color:white;
+}
+
+.instagram-btn{
+    background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);
+    color:white;
+}
+
+.social-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
 .btn-outline{
   background:transparent;
   color:#ffffff;
@@ -578,13 +609,13 @@ footer{
     <div style="margin-top:20px;">
       <a href="https://www.facebook.com/profile.php?id=61589597011041"
          target="_blank"
-         class="btn">
+         class="social-btn facebook-btn"
         📘 Facebook
       </a>
 
       <a href="https://www.instagram.com/veltodigitalads/"
          target="_blank"
-         class="btn">
+         class="social-btn instagram-btn"
         📸 Instagram
       </a>
     </div>
